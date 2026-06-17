@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download App — Rafiq-e-Hujjaj Guide</title>
+  <meta name="description" content="Download the Rafiq-e-Hujjaj Guide app for Android and iOS. Access Hajj training materials, booklets, and videos on your device." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" type="image/svg+xml" href="assets/arabesque.svg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+</head>
+<body>
+
+  <!-- Bismillah Bar -->
+  <div class="bismillah-bar" aria-label="Bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+
+  <!-- Navigation -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <i class="fa-solid fa-moon"></i>
+        Babu Imran Qureshi
+      </a>
+      <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="booklet.html">Booklet</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="download.html" class="active">Download App</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="hero-watermark" aria-hidden="true"></div>
+    <h1>Download the App</h1>
+    <p>Get the Rafiq-e-Hujjaj Hajj Guide on your device</p>
+  </header>
+
+  <hr class="gold-divider" />
+
+  <!-- Download Section -->
+  <section class="download-section section-pad">
+    <div class="container">
+
+      <!-- App Card -->
+      <div class="app-card fade-in">
+        <div class="app-icon">
+          <div class="app-icon-monogram">
+            <i class="fa-solid fa-moon"></i>
+            <span>RHC</span>
+          </div>
+        </div>
+
+        <h2>Rafiq-e-Hujjaj Guide</h2>
+
+        <p>
+          Access Hajj training materials, booklets, videos, and prayer guides — all in one place.
+          Stay connected with the Committee's latest updates and resources, wherever you are.
+        </p>
+
+        <div class="download-btns">
+          <!-- Replace # with actual Play Store / APK link -->
+          <a href="#" class="btn btn-android">
+            <i class="fa-brands fa-android"></i>
+            Download for Android
+          </a>
+
+          <!-- Replace # with actual App Store link -->
+          <a href="#" class="btn btn-ios">
+            <i class="fa-brands fa-apple"></i>
+            Download for iOS
+          </a>
+
+          <a href="index.html" class="btn-webapp">
+            <i class="fa-solid fa-globe"></i>
+            Open Web App
+          </a>
+        </div>
+      </div>
+
+      <!-- Share Link Card -->
+      <div class="share-section-card fade-in">
+        <h3>Share with Pilgrims</h3>
+        <p>Copy this link and share it so pilgrims can directly access the download page.</p>
+        <div class="share-input-row">
+          <input
+            type="text"
+            id="shareUrl"
+            value="https://yourdomain.com/download.html"
+            readonly
+            aria-label="Shareable download link"
+          />
+          <button class="btn-copy" id="copyLinkBtn" type="button">Copy Link</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PWA Install Prompt -->
+  <div class="pwa-prompt" id="pwaPrompt" role="dialog" aria-label="Install app" style="display:none;">
+    <p>
+      <strong>Install Rafiq-e-Hujjaj Guide</strong><br>
+      Add this site to your home screen for quick access.
+    </p>
+    <div class="pwa-btns">
+      <button class="btn-pwa-install" id="pwaInstall">Install</button>
+      <button class="btn-pwa-dismiss" id="pwaDismiss">Later</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-divider"></div>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <i class="fa-solid fa-moon" style="margin-right:0.4rem;"></i>Babu Imran Qureshi
+        <span>Rafiq-e-Hujjaj Committee | Pakistan</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="booklet.html">Booklet</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="download.html">Download App</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

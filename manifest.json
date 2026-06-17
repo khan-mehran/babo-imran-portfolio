@@ -1,0 +1,18 @@
+{
+  "name": "Rafiq-e-Hujjaj Guide",
+  "short_name": "RHC Guide",
+  "description": "Official Hajj Training Guide by Babu Imran Qureshi and the Rafiq-e-Hujjaj Committee, Pakistan.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#1A3A2A",
+  "theme_color": "#1A3A2A",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/arabesque.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
