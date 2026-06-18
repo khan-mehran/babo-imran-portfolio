@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Green circle background -->
+  <rect width="512" height="512" rx="112" ry="112" fill="#1A3A2A"/>
+  <!-- Gold crescent moon -->
+  <circle cx="256" cy="256" r="140" fill="#C8A85B"/>
+  <circle cx="310" cy="210" r="118" fill="#1A3A2A"/>
+  <!-- Gold star -->
+  <polygon
+    points="355,168 362,189 384,189 367,202 373,224 355,211 337,224 343,202 326,189 348,189"
+    fill="#C8A85B"/>
+</svg>

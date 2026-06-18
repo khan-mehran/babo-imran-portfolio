@@ -75,39 +75,11 @@
   });
 })();
 
-// ---------- PWA: beforeinstallprompt ----------
-(function () {
-  let deferredPrompt = null;
-  const prompt     = document.getElementById('pwaPrompt');
-  const installBtn = document.getElementById('pwaInstall');
-  const dismissBtn = document.getElementById('pwaDismiss');
-
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    if (prompt) prompt.classList.add('show');
-  });
-
-  if (installBtn) {
-    installBtn.addEventListener('click', async () => {
-      if (!deferredPrompt) return;
-      deferredPrompt.prompt();
-      const { outcome } = await deferredPrompt.userChoice;
-      deferredPrompt = null;
-      if (prompt) prompt.classList.remove('show');
-    });
-  }
-
-  if (dismissBtn) {
-    dismissBtn.addEventListener('click', () => {
-      if (prompt) prompt.classList.remove('show');
-    });
-  }
-})();
+// PWA install is handled inline in download.html
 
 // ---------- Register Service Worker ----------
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').catch(() => {});
+    navigator.serviceWorker.register('./sw.js').catch(() => {});
   });
 }

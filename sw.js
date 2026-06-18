@@ -1,15 +1,16 @@
 /* Rafiq-e-Hujjaj Guide — Service Worker (basic offline shell cache) */
 const CACHE = 'rhc-v1';
 const PRECACHE = [
-  '/',
-  '/index.html',
-  '/booklet.html',
-  '/videos.html',
-  '/download.html',
-  '/css/style.css',
-  '/js/main.js',
-  '/assets/arabesque.svg',
-  '/manifest.json'
+  './',
+  './index.html',
+  './booklet.html',
+  './videos.html',
+  './download.html',
+  './css/style.css',
+  './js/main.js',
+  './assets/arabesque.svg',
+  './assets/favicon.svg',
+  './manifest.json'
 ];
 
 self.addEventListener('install', event => {
