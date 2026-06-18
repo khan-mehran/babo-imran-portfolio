@@ -1103,6 +1103,89 @@ h1, h2, h3 {
   min-height: 8px;
 }
 
+/* ============================================================
+   Bottom Navigation Bar (mobile app-style)
+   ============================================================ */
+
+.bottom-nav {
+  display: none; /* hidden on desktop — shown via media query */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 980; /* below PWA sheet (9999) but above content */
+  background: var(--green);
+  border-top: 1px solid rgba(200, 168, 91, 0.2);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.18);
+  /* iOS safe area */
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.bottom-nav-inner {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  height: 62px;
+}
+
+.bottom-nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: rgba(255, 255, 255, 0.52);
+  text-decoration: none;
+  position: relative;
+  padding: 6px 4px 4px;
+  transition: color 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.bottom-nav-item i {
+  font-size: 1.22rem;
+  line-height: 1;
+  transition: transform 0.2s ease, color 0.2s;
+}
+
+.bottom-nav-item span {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* Active state */
+.bottom-nav-item.active {
+  color: var(--gold);
+}
+.bottom-nav-item.active i {
+  transform: translateY(-2px);
+}
+
+/* Gold pip under active icon */
+.bottom-nav-item.active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28px;
+  height: 3px;
+  border-radius: 0 0 3px 3px;
+  background: var(--gold);
+}
+
+/* Tap ripple feel */
+.bottom-nav-item:active {
+  color: var(--gold);
+}
+.bottom-nav-item:active i {
+  transform: translateY(-2px) scale(0.92);
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .about-highlights, .stat-grid {
@@ -1118,20 +1201,15 @@ h1, h2, h3 {
 }
 
 @media (max-width: 700px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 68px;
-    left: 0; right: 0;
-    background: var(--green);
-    padding: 1rem 1.5rem 1.5rem;
-    gap: 1rem;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  /* Show bottom nav, hide hamburger + dropdown nav */
+  .bottom-nav { display: block; }
+  .hamburger  { display: none !important; }
+  .nav-links  { display: none !important; }
+
+  /* Add space so footer isn't hidden under the bottom bar */
+  body {
+    padding-bottom: calc(62px + env(safe-area-inset-bottom, 0px));
   }
-  .nav-links.open { display: flex; }
-  .hamburger { display: flex; }
-  .navbar { position: relative; }
 
   .about-highlights, .stat-grid { grid-template-columns: 1fr; }
   .video-grid { grid-template-columns: 1fr; }

@@ -41,10 +41,20 @@
   elements.forEach(function (el) { observer.observe(el); });
 })();
 
-// ---------- Active Nav Link ----------
+// ---------- Active Nav Links (top + bottom) ----------
 (function () {
   var page = window.location.pathname.split('/').pop() || 'index.html';
+
+  // Top nav links
   document.querySelectorAll('.nav-links a').forEach(function (a) {
+    var href = a.getAttribute('href');
+    if (href === page || (page === '' && href === 'index.html')) {
+      a.classList.add('active');
+    }
+  });
+
+  // Bottom nav items
+  document.querySelectorAll('.bottom-nav-item').forEach(function (a) {
     var href = a.getAttribute('href');
     if (href === page || (page === '' && href === 'index.html')) {
       a.classList.add('active');
