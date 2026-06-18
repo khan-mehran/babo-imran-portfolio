@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Download App — Rafiq-e-Hujjaj Guide</title>
-  <meta name="description" content="Install the Rafiq-e-Hujjaj Guide on your phone. Access Hajj training materials, booklets, and videos anywhere." />
+  <title>Install App — Rafiq-e-Hujjaj Guide</title>
+  <meta name="description" content="Install the Rafiq-e-Hujjaj Guide on your phone. Hajj training materials, booklets, and videos — always at hand." />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="manifest" href="manifest.json" />
   <!-- Favicon -->
@@ -18,106 +18,6 @@
   <meta name="apple-mobile-web-app-title" content="RHC Guide" />
   <meta name="mobile-web-app-capable" content="yes" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
-
-  <style>
-    .install-panel { max-width: 580px; margin: 0 auto 2rem; }
-
-    /* Android install card */
-    .android-install-card {
-      display: none;
-      background: var(--green);
-      color: #fff;
-      border-radius: var(--radius);
-      padding: 1.75rem 2rem;
-      margin-bottom: 1.5rem;
-      align-items: center;
-      gap: 1.25rem;
-      box-shadow: 0 4px 20px rgba(26,58,42,0.3);
-    }
-    .android-install-card.show { display: flex; }
-    .android-install-card i.platform-icon { font-size: 2rem; color: var(--gold); flex-shrink: 0; }
-    .android-install-card p { font-size: 0.92rem; line-height: 1.5; flex: 1; }
-    .android-install-card p strong { color: var(--gold); display: block; margin-bottom: 0.2rem; font-size: 1rem; }
-    .btn-install-now {
-      background: var(--gold);
-      color: var(--green);
-      border: none;
-      border-radius: 8px;
-      padding: 0.65rem 1.25rem;
-      font-weight: 700;
-      font-size: 0.9rem;
-      cursor: pointer;
-      white-space: nowrap;
-      flex-shrink: 0;
-      transition: background 0.2s;
-    }
-    .btn-install-now:hover { background: #a8882b; }
-
-    /* Already installed */
-    .installed-notice {
-      display: none;
-      background: #e8f5e9;
-      border: 1.5px solid #4caf50;
-      border-radius: var(--radius);
-      padding: 1rem 1.5rem;
-      margin-bottom: 1.5rem;
-      font-size: 0.92rem;
-      color: #2e7d32;
-      text-align: center;
-    }
-    .installed-notice.show { display: block; }
-
-    /* iOS guide */
-    .ios-guide {
-      display: none;
-      background: var(--white);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      margin-bottom: 1.5rem;
-    }
-    .ios-guide.show { display: block; }
-    .ios-guide-header {
-      background: var(--green);
-      color: #fff;
-      padding: 1rem 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      font-weight: 600;
-      font-size: 0.97rem;
-    }
-    .ios-guide-header i { color: var(--gold); font-size: 1.2rem; }
-    .ios-steps { padding: 1.25rem 1.5rem; display: flex; flex-direction: column; gap: 0.9rem; }
-    .ios-step { display: flex; align-items: flex-start; gap: 0.9rem; }
-    .step-num {
-      width: 28px; height: 28px; border-radius: 50%;
-      background: var(--gold); color: var(--green);
-      font-weight: 700; font-size: 0.82rem;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0; margin-top: 2px;
-    }
-    .ios-step p { font-size: 0.9rem; color: var(--walnut); line-height: 1.55; }
-    .ios-step p strong { color: var(--green); }
-    .step-icon {
-      display: inline-flex; align-items: center; justify-content: center;
-      background: var(--sand); border-radius: 5px;
-      padding: 2px 6px; font-size: 0.8rem; margin: 0 2px; vertical-align: middle;
-    }
-
-    /* Fallback */
-    .fallback-guide {
-      background: var(--parchment);
-      border: 1.5px dashed var(--gold);
-      border-radius: var(--radius);
-      padding: 1.25rem 1.5rem;
-      font-size: 0.9rem;
-      color: var(--walnut);
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
-    }
-    .fallback-guide strong { color: var(--green); }
-  </style>
 </head>
 <body>
 
@@ -152,94 +52,55 @@
 
   <hr class="gold-divider" />
 
-  <!-- Download / Install Section -->
+  <!-- Install Section -->
   <section class="download-section section-pad">
     <div class="container">
 
       <!-- App Card -->
-      <div class="app-card fade-in" style="margin-bottom:2rem;">
+      <div class="app-card fade-in">
         <div class="app-icon">
           <div class="app-icon-monogram">
             <i class="fa-solid fa-moon"></i>
             <span>RHC</span>
           </div>
         </div>
+
         <h2>Rafiq-e-Hujjaj Guide</h2>
+
         <p>
           Access Hajj training materials, booklets, videos, and prayer guides — all in one place.
-          Installs directly to your home screen, works offline, no app store needed.
+          Installs directly to your home screen, works offline, no app store required.
         </p>
-      </div>
 
-      <!-- Install Panel — JS controls which inner card shows -->
-      <div class="install-panel fade-in">
-
-        <!-- Already installed as PWA -->
-        <div class="installed-notice" id="installedNotice">
-          <i class="fa-solid fa-circle-check" style="color:#4caf50; margin-right:0.4rem;"></i>
-          App is already installed on this device!
-        </div>
-
-        <!-- Android Chrome: inline install button (shown when beforeinstallprompt fires) -->
-        <div class="android-install-card" id="androidInstallCard">
-          <i class="fa-brands fa-android platform-icon"></i>
-          <p>
-            <strong>Install on Android</strong>
-            Tap below to add this app to your home screen — no Play Store required.
-          </p>
-          <button class="btn-install-now" id="androidInstallBtn" type="button">
-            <i class="fa-solid fa-download" style="margin-right:0.3rem;"></i>Install Now
+        <!-- Android: install button injected by JS when prompt is available -->
+        <div id="inlineInstallWrap" style="display:none; margin-bottom:0.5rem;">
+          <button id="inlineInstallBtn" class="btn btn-gold" style="width:100%;max-width:320px;display:flex;align-items:center;justify-content:center;gap:0.5rem;font-size:1rem;padding:0.85rem 2rem;">
+            <i class="fa-solid fa-download"></i> Install App
           </button>
         </div>
 
-        <!-- iOS Safari: step-by-step guide -->
-        <div class="ios-guide" id="iosGuide">
-          <div class="ios-guide-header">
-            <i class="fa-brands fa-apple"></i>
-            How to Install on iPhone / iPad
-          </div>
-          <div class="ios-steps">
-            <div class="ios-step">
-              <span class="step-num">1</span>
-              <p>Make sure you are using <strong>Safari</strong> (not Chrome or another browser).</p>
-            </div>
-            <div class="ios-step">
-              <span class="step-num">2</span>
-              <p>
-                Tap the <strong>Share</strong> button
-                <span class="step-icon"><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
-                at the bottom of the Safari screen.
-              </p>
-            </div>
-            <div class="ios-step">
-              <span class="step-num">3</span>
-              <p>
-                Scroll down in the share sheet and tap
-                <strong>"Add to Home Screen"</strong>
-                <span class="step-icon"><i class="fa-solid fa-plus"></i></span>
-              </p>
-            </div>
-            <div class="ios-step">
-              <span class="step-num">4</span>
-              <p>Tap <strong>Add</strong> in the top-right corner. The RHC Guide icon will appear on your home screen.</p>
-            </div>
-          </div>
+        <!-- iOS notice -->
+        <div id="iosInstallNote" style="display:none; background:var(--parchment); border:1.5px dashed var(--gold); border-radius:10px; padding:1rem 1.25rem; margin-bottom:0.5rem; font-size:0.88rem; color:var(--walnut); text-align:left; max-width:320px; margin-left:auto; margin-right:auto;">
+          <strong style="color:var(--green);">
+            <i class="fa-brands fa-apple" style="margin-right:0.35rem;"></i>iPhone / iPad
+          </strong><br>
+          Tap <i class="fa-solid fa-arrow-up-from-bracket"></i> Share →
+          <strong>Add to Home Screen</strong> → <strong>Add</strong>
         </div>
 
-        <!-- Generic fallback for other browsers -->
-        <div class="fallback-guide" id="fallbackGuide">
-          <strong><i class="fa-solid fa-mobile-screen-button" style="margin-right:0.4rem;"></i>Add to Home Screen</strong><br>
-          Open your browser menu and tap <strong>"Install App"</strong> or
-          <strong>"Add to Home Screen"</strong> to install the Rafiq-e-Hujjaj Guide
-          on your device — no app store required.
-        </div>
-
+        <a href="index.html" class="btn-webapp">
+          <i class="fa-solid fa-globe"></i>
+          Continue to Web App
+        </a>
       </div>
 
       <!-- Share Link Card -->
       <div class="share-section-card fade-in">
-        <h3><i class="fa-solid fa-share-nodes" style="color:var(--gold); margin-right:0.4rem;"></i>Share with Pilgrims</h3>
-        <p>Copy this link and send it to pilgrims so they can install the app on their phones.</p>
+        <h3>
+          <i class="fa-solid fa-share-nodes" style="color:var(--gold); margin-right:0.4rem;"></i>
+          Share with Pilgrims
+        </h3>
+        <p>Copy this link so pilgrims can install the app on their phones.</p>
         <div class="share-input-row">
           <input
             type="text"
@@ -274,90 +135,32 @@
 
   <script src="js/main.js"></script>
   <script>
+    /* Inline install button on the download page itself */
     (function () {
-      var androidCard = document.getElementById('androidInstallCard');
-      var androidBtn  = document.getElementById('androidInstallBtn');
-      var iosGuide    = document.getElementById('iosGuide');
-      var fallback    = document.getElementById('fallbackGuide');
-      var installed   = document.getElementById('installedNotice');
+      var ua = navigator.userAgent;
+      var isIos = /iphone|ipad|ipod/i.test(ua);
+      var isSafari = isIos && /safari/i.test(ua) && !/crios|fxios|opios|mercury/i.test(ua);
+      var isStandalone = window.matchMedia('(display-mode: standalone)').matches
+        || window.navigator.standalone === true;
 
-      var ua          = navigator.userAgent;
-      var isIos       = /iphone|ipad|ipod/i.test(ua);
-      var isSafari    = isIos && /safari/i.test(ua) && !/crios|fxios|opios|mercury/i.test(ua);
-      var isAndroid   = /android/i.test(ua);
-      var isStandalone =
-        window.matchMedia('(display-mode: standalone)').matches ||
-        window.navigator.standalone === true;
+      if (isStandalone) return;
 
-      // Running as installed PWA
-      if (isStandalone) {
-        installed.classList.add('show');
-        fallback.style.display = 'none';
-        return;
-      }
-
-      // iOS Safari — manual steps
       if (isIos && isSafari) {
-        iosGuide.classList.add('show');
-        fallback.style.display = 'none';
+        document.getElementById('iosInstallNote').style.display = 'block';
         return;
       }
 
-      // iOS but wrong browser
-      if (isIos && !isSafari) {
-        fallback.innerHTML =
-          '<strong><i class="fa-brands fa-apple" style="margin-right:.4rem;"></i>Open in Safari to Install</strong><br>' +
-          'To install on iPhone, open this page in <strong>Safari</strong>. ' +
-          'Tap the menu button in your browser and choose <strong>"Open in Safari"</strong>, ' +
-          'then tap Share <span style="font-size:.8rem;background:var(--sand);border-radius:4px;padding:1px 5px;">' +
-          '<i class="fa-solid fa-arrow-up-from-bracket"></i></span> → <strong>Add to Home Screen</strong>.';
-        return;
-      }
+      var wrap = document.getElementById('inlineInstallWrap');
+      var btn  = document.getElementById('inlineInstallBtn');
 
-      // Android / desktop Chrome — wait for beforeinstallprompt
-      // Show fallback after 3s if prompt never fires
-      var promptTimer = setTimeout(function () {
-        if (!androidCard.classList.contains('show')) {
-          if (isAndroid) {
-            fallback.innerHTML =
-              '<strong><i class="fa-brands fa-android" style="margin-right:.4rem;"></i>Install on Android</strong><br>' +
-              'Tap the <strong>three-dot menu</strong> <span style="font-size:.8rem;background:var(--sand);border-radius:4px;padding:1px 5px;">' +
-              '<i class="fa-solid fa-ellipsis-vertical"></i></span> in Chrome, then tap ' +
-              '<strong>"Add to Home Screen"</strong> or <strong>"Install App"</strong>.';
-          }
-        }
-      }, 3000);
-
-      // beforeinstallprompt fires — show the install button
       window.addEventListener('beforeinstallprompt', function (e) {
-        e.preventDefault();
-        clearTimeout(promptTimer);
-        fallback.style.display = 'none';
-        window.__pwaPrompt = e;
-        androidCard.classList.add('show');
-      });
-
-      // Inline install button click
-      if (androidBtn) {
-        androidBtn.addEventListener('click', async function () {
-          if (!window.__pwaPrompt) return;
-          window.__pwaPrompt.prompt();
-          var result = await window.__pwaPrompt.userChoice;
-          window.__pwaPrompt = null;
-          androidCard.classList.remove('show');
-          if (result.outcome === 'accepted') {
-            installed.classList.add('show');
-          } else {
-            fallback.style.display = '';
+        // main.js already called e.preventDefault() — just share the prompt
+        wrap.style.display = 'block';
+        btn.addEventListener('click', function () {
+          if (window.__rhcDeferredPrompt) {
+            window.__rhcDeferredPrompt.prompt();
           }
         });
-      }
-
-      // Already installed event
-      window.addEventListener('appinstalled', function () {
-        androidCard.classList.remove('show');
-        fallback.style.display = 'none';
-        installed.classList.add('show');
       });
     })();
   </script>
