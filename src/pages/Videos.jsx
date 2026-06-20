@@ -1,10 +1,10 @@
 import { useLang } from '../context/LangContext'
 
 const VIDEO_ITEMS = [
-  { titleKey: 'video1_title', descKey: 'video1_desc', youtubeId: null, live: false },
-  { titleKey: 'video2_title', descKey: 'video2_desc', youtubeId: null, live: false },
-  { titleKey: 'video3_title', descKey: 'video3_desc', youtubeId: null, live: false },
-  { titleKey: 'video4_title', descKey: 'video4_desc', youtubeId: null, live: false },
+  { titleKey: 'video1_title', descKey: 'video1_desc', youtubeId: 'zcHDGEtggIs' },
+  { titleKey: 'video2_title', descKey: 'video2_desc', youtubeId: null },
+  { titleKey: 'video3_title', descKey: 'video3_desc', youtubeId: null },
+  { titleKey: 'video4_title', descKey: 'video4_desc', youtubeId: null },
 ]
 
 export default function Videos() {
