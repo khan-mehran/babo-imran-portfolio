@@ -2,7 +2,7 @@
    Babu Imran Qureshi — Portfolio Website
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap');
 
 /* ---------- CSS Custom Properties ---------- */
 :root {
@@ -54,7 +54,9 @@ h1, h2, h3 {
 .amiri       { font-family: 'Amiri', serif; }
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   padding: 0.75rem 1.75rem;
   border-radius: 6px;
   font-family: 'Inter', sans-serif;
@@ -487,6 +489,9 @@ h1, h2, h3 {
   color: var(--gold);
   font-family: 'Playfair Display', serif;
   font-size: 1.05rem;
+}
+.footer-brand > i {
+  margin-inline-end: 0.4rem;
 }
 .footer-brand span {
   display: block;
@@ -1219,4 +1224,97 @@ h1, h2, h3 {
   .footer-links { gap: 1rem; }
 
   .section-pad { padding: 56px 0; }
+}
+
+/* ============================================================
+   Language Toggle Button
+   ============================================================ */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  border: 1.5px solid rgba(200, 168, 91, 0.5);
+  border-radius: 20px;
+  padding: 0.28rem 0.85rem;
+  color: var(--gold);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  font-family: 'Inter', sans-serif;
+  white-space: nowrap;
+  flex-shrink: 0;
+  letter-spacing: 0.02em;
+}
+.lang-toggle:hover {
+  background: rgba(200, 168, 91, 0.14);
+  border-color: var(--gold);
+}
+.lang-toggle i { font-size: 0.78rem; }
+
+/* ============================================================
+   RTL / Urdu Language Support
+   ============================================================ */
+
+/* Urdu body font */
+html[dir="rtl"] body {
+  font-family: 'Noto Nastaliq Urdu', 'Amiri', serif;
+  line-height: 2.1;
+}
+
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3 {
+  font-family: 'Noto Nastaliq Urdu', 'Amiri', serif;
+  line-height: 1.6;
+}
+
+/* Remove uppercase transforms — Urdu has no case */
+html[dir="rtl"] .hero-eyebrow,
+html[dir="rtl"] .coming-soon,
+html[dir="rtl"] .app-badge,
+html[dir="rtl"] .bottom-nav-item span {
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* Flip press card border to the right side in RTL */
+html[dir="rtl"] .press-card {
+  border-left: none;
+  border-right: 5px solid var(--gold);
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+
+html[dir="rtl"] .press-card .quote-icon {
+  left: auto;
+  right: 1.5rem;
+}
+
+html[dir="rtl"] .press-quote,
+html[dir="rtl"] .press-source {
+  padding-left: 0;
+  padding-right: 1rem;
+}
+
+/* Share icon margin flip for RTL */
+html[dir="rtl"] .share-section-card h3 i {
+  margin-right: 0 !important;
+  margin-left: 0.4rem;
+}
+
+/* Footer RTL alignment */
+html[dir="rtl"] .footer-inner {
+  text-align: right;
+}
+
+/* Booklet note code direction */
+html[dir="rtl"] .booklet-note code {
+  direction: ltr;
+  display: inline-block;
+}
+
+/* Flip moon icon to face the correct direction in RTL */
+html[dir="rtl"] .fa-moon {
+  transform: scaleX(-1);
 }

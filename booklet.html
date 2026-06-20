@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ur" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,6 +18,13 @@
   <meta name="apple-mobile-web-app-title" content="RHC Guide" />
   <meta name="mobile-web-app-capable" content="yes" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <script>
+    (function () {
+      var l = localStorage.getItem('rhc-lang') || 'ur';
+      document.documentElement.lang = l;
+      document.documentElement.dir  = l === 'ur' ? 'rtl' : 'ltr';
+    })();
+  </script>
 </head>
 <body>
 
@@ -29,25 +36,29 @@
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
         <i class="fa-solid fa-moon"></i>
-        Babu Imran Qureshi
+        <span data-i18n="nav_logoName">بابو عمران قریشی</span>
       </a>
+      <ul class="nav-links">
+        <li><a href="index.html" data-i18n="nav_home">ہوم</a></li>
+        <li><a href="booklet.html" class="active" data-i18n="nav_booklet">کتابچہ</a></li>
+        <li><a href="videos.html" data-i18n="nav_videos">ویڈیوز</a></li>
+        <li><a href="download.html" data-i18n="nav_downloadApp">ایپ ڈاؤنلوڈ</a></li>
+      </ul>
+      <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+        <i class="fa-solid fa-globe"></i>
+        <span data-i18n="lang_toggle">English</span>
+      </button>
       <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="booklet.html" class="active">Booklet</a></li>
-        <li><a href="videos.html">Videos</a></li>
-        <li><a href="download.html">Download App</a></li>
-      </ul>
     </div>
   </nav>
 
   <!-- Page Header -->
   <header class="page-header">
     <div class="hero-watermark" aria-hidden="true"></div>
-    <h1>Hajj Training Booklet</h1>
-    <p>Official Guide by Rafiq-e-Hujjaj Committee</p>
+    <h1 data-i18n="booklet_pageTitle">حج تربیتی کتابچہ</h1>
+    <p data-i18n="booklet_subtitle">رفیق حجاج کمیٹی کی طرف سے سرکاری رہنما</p>
   </header>
 
   <hr class="gold-divider" />
@@ -73,21 +84,17 @@
 
         <!-- Booklet Body -->
         <div class="booklet-body">
-          <p>
-            This official booklet, prepared by Babu Imran Qureshi and the Rafiq-e-Hujjaj Committee,
-            provides step-by-step guidance for pilgrims performing Hajj. Covering the complete rites,
-            duas, and practical advice, this guide ensures every pilgrim is prepared to perform the
-            sacred obligation in accordance with the Sunnah of the Holy Prophet ﷺ.
+          <p data-i18n="booklet_body">
+            یہ سرکاری کتابچہ، بابو عمران قریشی اور رفیق حجاج کمیٹی کی طرف سے تیار کیا گیا ہے، حج ادا کرنے والے حجاج کرام کے لیے مرحلہ وار رہنمائی فراہم کرتا ہے۔ مکمل مناسک، دعاؤں اور عملی مشوروں پر مشتمل یہ رہنما ہر حاجی کو یقین دلاتا ہے کہ وہ سنت نبوی ﷺ کے مطابق اس مقدس فریضے کو ادا کرنے کے لیے تیار ہے۔
           </p>
 
           <a href="assets/booklet.pdf" download class="btn btn-gold" style="font-size:1.05rem; padding:0.85rem 2rem;">
-            <i class="fa-solid fa-file-arrow-down" style="margin-right:0.5rem;"></i>
-            Download Booklet (PDF)
+            <i class="fa-solid fa-file-arrow-down"></i>
+            <span data-i18n="btn_downloadPDF">کتابچہ ڈاؤنلوڈ کریں (PDF)</span>
           </a>
 
-          <p class="booklet-note">
-            The actual booklet PDF will be placed at <code>assets/booklet.pdf</code>.
-            Simply replace the file to update the download.
+          <p class="booklet-note" data-i18n-html="booklet_note">
+            اصل کتابچہ PDF کو <code>assets/booklet.pdf</code> پر رکھا جائے گا۔ ڈاؤنلوڈ اپ ڈیٹ کرنے کے لیے فائل کو تبدیل کریں۔
           </p>
         </div>
 
@@ -100,14 +107,14 @@
     <div class="footer-divider"></div>
     <div class="footer-inner">
       <div class="footer-brand">
-        <i class="fa-solid fa-moon" style="margin-right:0.4rem;"></i>Babu Imran Qureshi
-        <span>Rafiq-e-Hujjaj Committee | Pakistan</span>
+        <i class="fa-solid fa-moon"></i><span data-i18n="nav_logoName">بابو عمران قریشی</span>
+        <span data-i18n="footer_brand">رفیق حجاج کمیٹی | پاکستان</span>
       </div>
       <ul class="footer-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="booklet.html">Booklet</a></li>
-        <li><a href="videos.html">Videos</a></li>
-        <li><a href="download.html">Download App</a></li>
+        <li><a href="index.html" data-i18n="nav_home">ہوم</a></li>
+        <li><a href="booklet.html" data-i18n="nav_booklet">کتابچہ</a></li>
+        <li><a href="videos.html" data-i18n="nav_videos">ویڈیوز</a></li>
+        <li><a href="download.html" data-i18n="nav_downloadApp">ایپ ڈاؤنلوڈ</a></li>
       </ul>
     </div>
   </footer>
@@ -117,23 +124,24 @@
     <div class="bottom-nav-inner">
       <a href="index.html" class="bottom-nav-item">
         <i class="fa-solid fa-house"></i>
-        <span>Home</span>
+        <span data-i18n="nav_home">ہوم</span>
       </a>
       <a href="booklet.html" class="bottom-nav-item">
         <i class="fa-solid fa-book-open"></i>
-        <span>Booklet</span>
+        <span data-i18n="nav_booklet">کتابچہ</span>
       </a>
       <a href="videos.html" class="bottom-nav-item">
         <i class="fa-solid fa-play"></i>
-        <span>Videos</span>
+        <span data-i18n="nav_videos">ویڈیوز</span>
       </a>
       <a href="download.html" class="bottom-nav-item">
         <i class="fa-solid fa-download"></i>
-        <span>App</span>
+        <span data-i18n="nav_app">ایپ</span>
       </a>
     </div>
   </nav>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

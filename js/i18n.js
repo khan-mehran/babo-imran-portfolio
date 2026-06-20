@@ -1,0 +1,198 @@
+/* ============================================================
+   i18n — Urdu (default) / English Language Toggle
+   ============================================================ */
+
+(function () {
+  var TRANSLATIONS = {
+    ur: {
+      nav_logoName:    'بابو عمران قریشی',
+      nav_home:        'ہوم',
+      nav_booklet:     'کتابچہ',
+      nav_videos:      'ویڈیوز',
+      nav_downloadApp: 'ایپ ڈاؤنلوڈ',
+      nav_app:         'ایپ',
+      lang_toggle:     'English',
+
+      hero_eyebrow:        'صدر، رفیق حجاج کمیٹی',
+      hero_subheading:     'پاکستانی حجاج کو مقدس سفر کی رہنمائی',
+      hero_tagline:        'کئی دہائیوں سے حجاج کرام کی خدمت میں — ہزاروں افراد کو سنت نبوی ﷺ کے مطابق حج ادا کرنے کی توفیق دے رہے ہیں',
+      btn_downloadBooklet: 'کتابچہ ڈاؤنلوڈ',
+      btn_watchVideos:     'ویڈیوز دیکھیں',
+
+      about_title:              'ہمارے بارے میں',
+      highlight_hajjExpert:     'حج تربیت کے ماہر',
+      highlight_ministryCollab: 'وزارت کے ساتھ تعاون',
+      highlight_masterTrainer:  'ماسٹر ٹرینر پروگرام کے سربراہ',
+      bio_p1: 'بابو عمران قریشی رفیق حجاج کمیٹی کے صدر ہیں، جو پاکستانی حجاج کرام کو حج کی تیاری کرانے والی ایک نمایاں تنظیم ہے۔ <strong>وزارت مذہبی امور و بین المذاہب ہم آہنگی</strong> کے ساتھ قریبی تعاون میں، کمیٹی ہر سال وسیع پیمانے پر حج تربیتی پروگرام منعقد کرتی ہے تاکہ حجاج کرام اس مقدس فریضے کو سنت نبوی ﷺ کے مطابق ادا کر سکیں۔',
+      bio_p2: 'ان کی قیادت میں، ماسٹر ٹرینرز کی ایک سرشار ٹیم حجاج کو حج کے ہر مرحلے میں رہنمائی فراہم کرتی ہے — روانگی سے پہلے کی تیاری سے لے کر ارض مقدس میں مناسک کی ادائیگی تک۔ ان کے اقدام نے ہزاروں پاکستانی حجاج کو اعتماد، علم اور روحانی تیاری کے ساتھ حج کرنے کے قابل بنایا ہے۔',
+      bio_p3: 'اے پی پی (ایسوسی ایٹڈ پریس آف پاکستان) کی رپورٹ کے مطابق، بابو عمران قریشی نے اعلان کیا کہ رفیق حجاج کمیٹی آئندہ ہفتے سے وزارت مذہبی امور کے تعاون سے کامیاب حجاج کرام کی وسیع تربیت شروع کرے گی — جو تمام متوقع حجاج کو قابل رسائی، اعلیٰ معیار کی دینی تعلیم فراہم کرنے کے ان کے عزم کا مظہر ہے۔',
+
+      highlights_title: 'اہم نکات',
+      stat1_number:     'ہزاروں+',
+      stat1_label:      'ہر سال تربیت یافتہ حجاج',
+      stat2_number:     'ملک گیر',
+      stat2_label:      'پاکستان بھر میں تربیتی مراکز',
+      stat3_number:     'وزارت<br>تصدیق شدہ',
+      stat3_label:      'وزارت مذہبی امور کے تعاون سے',
+
+      press_title:       'خبروں میں',
+      press_quote:       '"رفیق حج کمیٹی آئندہ ہفتے سے وزارت مذہبی امور و بین المذاہب ہم آہنگی کے تعاون سے کامیاب حجاج کرام کی وسیع حج تربیت شروع کرے گی۔"',
+      press_attribution: 'ایسوسی ایٹڈ پریس آف پاکستان — ۱۳ مارچ',
+
+      footer_brand: 'رفیق حجاج کمیٹی | پاکستان',
+
+      booklet_pageTitle: 'حج تربیتی کتابچہ',
+      booklet_subtitle:  'رفیق حجاج کمیٹی کی طرف سے سرکاری رہنما',
+      booklet_body:      'یہ سرکاری کتابچہ، بابو عمران قریشی اور رفیق حجاج کمیٹی کی طرف سے تیار کیا گیا ہے، حج ادا کرنے والے حجاج کرام کے لیے مرحلہ وار رہنمائی فراہم کرتا ہے۔ مکمل مناسک، دعاؤں اور عملی مشوروں پر مشتمل یہ رہنما ہر حاجی کو یقین دلاتا ہے کہ وہ سنت نبوی ﷺ کے مطابق اس مقدس فریضے کو ادا کرنے کے لیے تیار ہے۔',
+      btn_downloadPDF:   'کتابچہ ڈاؤنلوڈ کریں (PDF)',
+      booklet_note:      'اصل کتابچہ PDF کو <code>assets/booklet.pdf</code> پر رکھا جائے گا۔ ڈاؤنلوڈ اپ ڈیٹ کرنے کے لیے فائل کو تبدیل کریں۔',
+
+      videos_pageTitle: 'ویڈیو گیلری',
+      videos_subtitle:  'بابو عمران قریشی کی حج تربیت و رہنمائی ویڈیوز',
+      video1_title:     'بابو عمران قریشی کا حج تربیتی سیشن',
+      video1_desc:      'حجاج کرام کے لیے ضروری مناسک اور تیاریوں پر مشتمل ایک جامع تربیتی سیشن۔',
+      video2_title:     'حج مناسک اور طریقے — مکمل رہنما',
+      video2_desc:      'احرام سے طواف الوداع تک ہر حج کے منسک کا تفصیلی جائزہ۔ ویڈیو جلد آرہی ہے۔',
+      video3_title:     'حجاج کرام کے لیے روانگی سے پہلے کی رہنمائی',
+      video3_desc:      'ارض مقدس کے لیے روانگی سے پہلے حجاج کرام کے لیے ضروری رہنمائی۔ ویڈیو جلد آرہی ہے۔',
+      video4_title:     'حج کی دعائیں اور مناجات',
+      video4_desc:      'سفر حج کے ہر مرحلے کے لیے دعاؤں کی مرحلہ وار ادائیگی۔ ویڈیو جلد آرہی ہے۔',
+      coming_soon:      'جلد آرہی ہے',
+
+      download_pageTitle: 'ایپ انسٹال کریں',
+      download_subtitle:  'رفیق حجاج گائیڈ کو اپنی ہوم اسکرین میں شامل کریں',
+      appName:            'رفیق حجاج گائیڈ',
+      app_desc:           'حج تربیتی مواد، کتابچے، ویڈیوز اور نماز کی رہنمائی — سب ایک جگہ۔ براہ راست ہوم اسکرین پر انسٹال ہوتا ہے، آف لائن کام کرتا ہے، کوئی ایپ اسٹور درکار نہیں۔',
+      btn_installApp:     'ایپ انسٹال کریں',
+      ios_note:           '<strong style="color:var(--green);"><i class="fa-brands fa-apple" style="margin-left:0.35rem;"></i>آئی فون / آئی پیڈ</strong><br>شیئر <i class="fa-solid fa-arrow-up-from-bracket"></i> دبائیں &larr; <strong>ہوم اسکرین میں شامل کریں</strong> &larr; <strong>شامل کریں</strong>',
+      btn_continueWebApp: 'ویب ایپ پر جائیں',
+      share_title:        'حجاج کرام کے ساتھ شیئر کریں',
+      share_desc:         'یہ لنک کاپی کریں تاکہ حجاج کرام اپنے فون پر ایپ انسٹال کر سکیں۔',
+      btn_copyLink:       'لنک کاپی کریں',
+      btn_copied:         '✓ کاپی ہو گیا!',
+    },
+
+    en: {
+      nav_logoName:    'Babu Imran Qureshi',
+      nav_home:        'Home',
+      nav_booklet:     'Booklet',
+      nav_videos:      'Videos',
+      nav_downloadApp: 'Download App',
+      nav_app:         'App',
+      lang_toggle:     'اردو',
+
+      hero_eyebrow:        'President, Rafiq-e-Hujjaj Committee',
+      hero_subheading:     "Guiding Pakistan's Pilgrims Toward a Sacred Journey",
+      hero_tagline:        'Serving Hajj pilgrims since decades — empowering thousands to perform Hajj in accordance with the Sunnah of the Holy Prophet ﷺ',
+      btn_downloadBooklet: 'Download Booklet',
+      btn_watchVideos:     'Watch Videos',
+
+      about_title:              'About',
+      highlight_hajjExpert:     'Hajj Training Expert',
+      highlight_ministryCollab: 'Ministry Collaborator',
+      highlight_masterTrainer:  'Master Trainer Program Lead',
+      bio_p1: 'Babu Imran Qureshi is the President of the Rafiq-e-Hujjaj Committee, a leading organization dedicated to preparing Pakistani pilgrims for the Hajj pilgrimage. Working in close collaboration with the <strong>Ministry of Religious Affairs and Interfaith Harmony</strong>, the Committee conducts extensive Hajj training programs every year, ensuring that pilgrims can fulfill this sacred obligation in accordance with the Sunnah of the Holy Prophet ﷺ.',
+      bio_p2: 'Under his leadership, a dedicated team of master trainers has been deployed to guide pilgrims through every stage of the Hajj journey — from pre-departure orientation to the performance of rites in the Holy Land. His initiative has empowered thousands of Pakistani pilgrims to approach Hajj with confidence, knowledge, and spiritual preparedness.',
+      bio_p3: 'As reported by APP (Associated Press of Pakistan), Babu Imran Qureshi announced that the Rafiq-e-Hujjaj Committee would commence its extensive Hajj training from the following week, in collaboration with the Ministry of Religious Affairs — reflecting his commitment to accessible, high-quality religious education for all intending pilgrims.',
+
+      highlights_title: 'Key Highlights',
+      stat1_number:     '1000s+',
+      stat1_label:      'Pilgrims Trained Annually',
+      stat2_number:     'Nationwide',
+      stat2_label:      'Training Centers Across Pakistan',
+      stat3_number:     'Ministry<br>Certified',
+      stat3_label:      'In Collaboration with Ministry of Religious Affairs',
+
+      press_title:       'In the News',
+      press_quote:       '"The Rafiq-e-Hajj Committee would start extensive Hajj training of successful pilgrims from next week in collaboration with the Ministry of Religious Affairs and Interfaith Harmony."',
+      press_attribution: 'Associated Press of Pakistan — March 13',
+
+      footer_brand: 'Rafiq-e-Hujjaj Committee | Pakistan',
+
+      booklet_pageTitle: 'Hajj Training Booklet',
+      booklet_subtitle:  'Official Guide by Rafiq-e-Hujjaj Committee',
+      booklet_body:      'This official booklet, prepared by Babu Imran Qureshi and the Rafiq-e-Hujjaj Committee, provides step-by-step guidance for pilgrims performing Hajj. Covering the complete rites, duas, and practical advice, this guide ensures every pilgrim is prepared to perform the sacred obligation in accordance with the Sunnah of the Holy Prophet ﷺ.',
+      btn_downloadPDF:   'Download Booklet (PDF)',
+      booklet_note:      'The actual booklet PDF will be placed at <code>assets/booklet.pdf</code>. Simply replace the file to update the download.',
+
+      videos_pageTitle: 'Video Gallery',
+      videos_subtitle:  'Hajj Training &amp; Guidance Videos by Babu Imran Qureshi',
+      video1_title:     'Hajj Training Session by Babu Imran Qureshi',
+      video1_desc:      'A comprehensive training session covering the essential rites and preparations for Hajj pilgrims.',
+      video2_title:     'Hajj Rites &amp; Procedures — Full Guide',
+      video2_desc:      'Detailed walkthrough of every Hajj rite — from Ihram to Tawaf al-Widaa. Video coming soon.',
+      video3_title:     'Pre-Departure Orientation for Pilgrims',
+      video3_desc:      'Essential guidance for pilgrims before departing for the Holy Land. Video coming soon.',
+      video4_title:     'Duas &amp; Supplications for Hajj',
+      video4_desc:      'Step-by-step recitation of duas for every stage of the pilgrimage journey. Video coming soon.',
+      coming_soon:      'Coming Soon',
+
+      download_pageTitle: 'Install the App',
+      download_subtitle:  'Add Rafiq-e-Hujjaj Guide to your home screen',
+      appName:            'Rafiq-e-Hujjaj Guide',
+      app_desc:           'Access Hajj training materials, booklets, videos, and prayer guides — all in one place. Installs directly to your home screen, works offline, no app store required.',
+      btn_installApp:     'Install App',
+      ios_note:           '<strong style="color:var(--green);"><i class="fa-brands fa-apple" style="margin-right:0.35rem;"></i>iPhone / iPad</strong><br>Tap <i class="fa-solid fa-arrow-up-from-bracket"></i> Share &rarr; <strong>Add to Home Screen</strong> &rarr; <strong>Add</strong>',
+      btn_continueWebApp: 'Continue to Web App',
+      share_title:        'Share with Pilgrims',
+      share_desc:         'Copy this link so pilgrims can install the app on their phones.',
+      btn_copyLink:       'Copy Link',
+      btn_copied:         '✓ Copied!',
+    }
+  };
+
+  var DEFAULT_LANG = 'ur';
+  var STORAGE_KEY  = 'rhc-lang';
+
+  function getLang() {
+    return localStorage.getItem(STORAGE_KEY) || DEFAULT_LANG;
+  }
+
+  function applyLanguage(lang) {
+    var t = TRANSLATIONS[lang];
+    if (!t) return;
+
+    document.documentElement.lang = lang;
+    document.documentElement.dir  = lang === 'ur' ? 'rtl' : 'ltr';
+    document.body.classList.toggle('lang-ur', lang === 'ur');
+    document.body.classList.toggle('lang-en', lang === 'en');
+
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n');
+      if (t[key] !== undefined) el.textContent = t[key];
+    });
+
+    document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-html');
+      if (t[key] !== undefined) el.innerHTML = t[key];
+    });
+  }
+
+  function init() {
+    var lang = getLang();
+    applyLanguage(lang);
+
+    var btn = document.getElementById('langToggle');
+    if (!btn) return;
+
+    btn.addEventListener('click', function () {
+      var next = getLang() === 'ur' ? 'en' : 'ur';
+      localStorage.setItem(STORAGE_KEY, next);
+      applyLanguage(next);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+  window.RHCi18n = {
+    getLang: getLang,
+    get: function (key) {
+      var t = TRANSLATIONS[getLang()];
+      return t && t[key] !== undefined ? t[key] : key;
+    }
+  };
+})();

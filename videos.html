@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ur" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,6 +18,13 @@
   <meta name="apple-mobile-web-app-title" content="RHC Guide" />
   <meta name="mobile-web-app-capable" content="yes" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <script>
+    (function () {
+      var l = localStorage.getItem('rhc-lang') || 'ur';
+      document.documentElement.lang = l;
+      document.documentElement.dir  = l === 'ur' ? 'rtl' : 'ltr';
+    })();
+  </script>
 </head>
 <body>
 
@@ -29,25 +36,29 @@
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
         <i class="fa-solid fa-moon"></i>
-        Babu Imran Qureshi
+        <span data-i18n="nav_logoName">بابو عمران قریشی</span>
       </a>
+      <ul class="nav-links">
+        <li><a href="index.html" data-i18n="nav_home">ہوم</a></li>
+        <li><a href="booklet.html" data-i18n="nav_booklet">کتابچہ</a></li>
+        <li><a href="videos.html" class="active" data-i18n="nav_videos">ویڈیوز</a></li>
+        <li><a href="download.html" data-i18n="nav_downloadApp">ایپ ڈاؤنلوڈ</a></li>
+      </ul>
+      <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+        <i class="fa-solid fa-globe"></i>
+        <span data-i18n="lang_toggle">English</span>
+      </button>
       <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="booklet.html">Booklet</a></li>
-        <li><a href="videos.html" class="active">Videos</a></li>
-        <li><a href="download.html">Download App</a></li>
-      </ul>
     </div>
   </nav>
 
   <!-- Page Header -->
   <header class="page-header">
     <div class="hero-watermark" aria-hidden="true"></div>
-    <h1>Video Gallery</h1>
-    <p>Hajj Training &amp; Guidance Videos by Babu Imran Qureshi</p>
+    <h1 data-i18n="videos_pageTitle">ویڈیو گیلری</h1>
+    <p data-i18n-html="videos_subtitle">بابو عمران قریشی کی حج تربیت و رہنمائی ویڈیوز</p>
   </header>
 
   <hr class="gold-divider" />
@@ -69,8 +80,8 @@
             </iframe>
           </div>
           <div class="video-info">
-            <h3>Hajj Training Session by Babu Imran Qureshi</h3>
-            <p>A comprehensive training session covering the essential rites and preparations for Hajj pilgrims.</p>
+            <h3 data-i18n="video1_title">بابو عمران قریشی کا حج تربیتی سیشن</h3>
+            <p data-i18n="video1_desc">حجاج کرام کے لیے ضروری مناسک اور تیاریوں پر مشتمل ایک جامع تربیتی سیشن۔</p>
           </div>
         </article>
 
@@ -79,12 +90,12 @@
           <div class="video-placeholder">
             <div class="video-placeholder-inner">
               <i class="fa-solid fa-video"></i>
-              <span class="coming-soon">Coming Soon</span>
+              <span class="coming-soon" data-i18n="coming_soon">جلد آرہی ہے</span>
             </div>
           </div>
           <div class="video-info">
-            <h3>Hajj Rites &amp; Procedures — Full Guide</h3>
-            <p>Detailed walkthrough of every Hajj rite — from Ihram to Tawaf al-Widaa. Video coming soon.</p>
+            <h3 data-i18n-html="video2_title">حج مناسک اور طریقے — مکمل رہنما</h3>
+            <p data-i18n="video2_desc">احرام سے طواف الوداع تک ہر حج کے منسک کا تفصیلی جائزہ۔ ویڈیو جلد آرہی ہے۔</p>
           </div>
         </article>
 
@@ -93,12 +104,12 @@
           <div class="video-placeholder">
             <div class="video-placeholder-inner">
               <i class="fa-solid fa-video"></i>
-              <span class="coming-soon">Coming Soon</span>
+              <span class="coming-soon" data-i18n="coming_soon">جلد آرہی ہے</span>
             </div>
           </div>
           <div class="video-info">
-            <h3>Pre-Departure Orientation for Pilgrims</h3>
-            <p>Essential guidance for pilgrims before departing for the Holy Land. Video coming soon.</p>
+            <h3 data-i18n="video3_title">حجاج کرام کے لیے روانگی سے پہلے کی رہنمائی</h3>
+            <p data-i18n="video3_desc">ارض مقدس کے لیے روانگی سے پہلے حجاج کرام کے لیے ضروری رہنمائی۔ ویڈیو جلد آرہی ہے۔</p>
           </div>
         </article>
 
@@ -107,12 +118,12 @@
           <div class="video-placeholder">
             <div class="video-placeholder-inner">
               <i class="fa-solid fa-video"></i>
-              <span class="coming-soon">Coming Soon</span>
+              <span class="coming-soon" data-i18n="coming_soon">جلد آرہی ہے</span>
             </div>
           </div>
           <div class="video-info">
-            <h3>Duas &amp; Supplications for Hajj</h3>
-            <p>Step-by-step recitation of duas for every stage of the pilgrimage journey. Video coming soon.</p>
+            <h3 data-i18n-html="video4_title">حج کی دعائیں اور مناجات</h3>
+            <p data-i18n="video4_desc">سفر حج کے ہر مرحلے کے لیے دعاؤں کی مرحلہ وار ادائیگی۔ ویڈیو جلد آرہی ہے۔</p>
           </div>
         </article>
 
@@ -125,14 +136,14 @@
     <div class="footer-divider"></div>
     <div class="footer-inner">
       <div class="footer-brand">
-        <i class="fa-solid fa-moon" style="margin-right:0.4rem;"></i>Babu Imran Qureshi
-        <span>Rafiq-e-Hujjaj Committee | Pakistan</span>
+        <i class="fa-solid fa-moon"></i><span data-i18n="nav_logoName">بابو عمران قریشی</span>
+        <span data-i18n="footer_brand">رفیق حجاج کمیٹی | پاکستان</span>
       </div>
       <ul class="footer-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="booklet.html">Booklet</a></li>
-        <li><a href="videos.html">Videos</a></li>
-        <li><a href="download.html">Download App</a></li>
+        <li><a href="index.html" data-i18n="nav_home">ہوم</a></li>
+        <li><a href="booklet.html" data-i18n="nav_booklet">کتابچہ</a></li>
+        <li><a href="videos.html" data-i18n="nav_videos">ویڈیوز</a></li>
+        <li><a href="download.html" data-i18n="nav_downloadApp">ایپ ڈاؤنلوڈ</a></li>
       </ul>
     </div>
   </footer>
@@ -142,23 +153,24 @@
     <div class="bottom-nav-inner">
       <a href="index.html" class="bottom-nav-item">
         <i class="fa-solid fa-house"></i>
-        <span>Home</span>
+        <span data-i18n="nav_home">ہوم</span>
       </a>
       <a href="booklet.html" class="bottom-nav-item">
         <i class="fa-solid fa-book-open"></i>
-        <span>Booklet</span>
+        <span data-i18n="nav_booklet">کتابچہ</span>
       </a>
       <a href="videos.html" class="bottom-nav-item">
         <i class="fa-solid fa-play"></i>
-        <span>Videos</span>
+        <span data-i18n="nav_videos">ویڈیوز</span>
       </a>
       <a href="download.html" class="bottom-nav-item">
         <i class="fa-solid fa-download"></i>
-        <span>App</span>
+        <span data-i18n="nav_app">ایپ</span>
       </a>
     </div>
   </nav>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

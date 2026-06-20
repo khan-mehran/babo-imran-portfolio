@@ -77,10 +77,10 @@
     } else {
       input.select(); document.execCommand('copy');
     }
-    btn.textContent = '✓ Copied!';
+    btn.textContent = (window.RHCi18n ? window.RHCi18n.get('btn_copied') : '✓ Copied!');
     btn.classList.add('copied');
     setTimeout(function () {
-      btn.textContent = 'Copy Link';
+      btn.textContent = (window.RHCi18n ? window.RHCi18n.get('btn_copyLink') : 'Copy Link');
       btn.classList.remove('copied');
     }, 2200);
   });
