@@ -1096,3 +1096,26 @@ html[dir="rtl"] .booklet-note code {
 html[dir="rtl"] .fa-moon {
   transform: scaleX(-1);
 }
+
+html[dir="rtl"] .pwa-sheet {
+  font-family: 'Noto Nastaliq Urdu', 'Amiri', serif;
+  line-height: 1.9;
+}
+
+html[dir="rtl"] .pwa-sheet-meta h3,
+html[dir="rtl"] .pwa-sheet-meta p {
+  font-family: 'Noto Nastaliq Urdu', 'Amiri', serif;
+}
+
+html[dir="rtl"] .pwa-feature-list li,
+html[dir="rtl"] .pwa-ios-step span {
+  font-family: 'Noto Nastaliq Urdu', 'Amiri', serif;
+  font-size: 0.95rem;
+}
+
+html[dir="rtl"] .btn-pwa-later,
+html[dir="rtl"] .btn-pwa-install,
+html[dir="rtl"] .btn-pwa-gotit {
+  font-family: 'Noto Nastaliq Urdu', 'Amiri', serif;
+  font-size: 1rem;
+}

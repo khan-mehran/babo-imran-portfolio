@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import BottomNav from './components/BottomNav'
 import BismillahBar from './components/BismillahBar'
+import PWAInstallSheet from './components/PWAInstallSheet'
 import Home from './pages/Home'
 import Booklet from './pages/Booklet'
 import Videos from './pages/Videos'
@@ -46,6 +47,7 @@ export default function App() {
       <AnimatedRoutes />
       <Footer />
       <BottomNav />
+      <PWAInstallSheet />
     </LangProvider>
   )
 }

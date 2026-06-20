@@ -43,9 +43,9 @@ export default function Booklet() {
                 </button>
               </div>
 
-              <p className="booklet-note">
+              {/* <p className="booklet-note">
                 <code>assets/booklet.pdf</code> — {t('booklet_note')}
-              </p>
+              </p> */}
             </div>
           </div>
 

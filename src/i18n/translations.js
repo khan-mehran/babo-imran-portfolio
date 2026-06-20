@@ -70,6 +70,18 @@ export const translations = {
     share_desc:         'یہ لنک کاپی کریں تاکہ حجاج کرام اپنے فون پر ایپ انسٹال کر سکیں۔',
     btn_copyLink:       'لنک کاپی کریں',
     btn_copied:         '✓ کاپی ہو گیا!',
+
+    pwa_subtitle:  'رفیق حجاج کمیٹی',
+    pwa_feature1:  'آف لائن کام کرتا ہے — انٹرنیٹ کی ضرورت نہیں',
+    pwa_feature2:  'فوری انسٹال — ایپ اسٹور کی ضرورت نہیں',
+    pwa_feature3:  'حج کتابچے، ویڈیوز اور نماز رہنما',
+    pwa_not_now:   'ابھی نہیں',
+    pwa_ios_title:    'آئی فون پر انسٹال کریں',
+    pwa_ios_subtitle: 'ہوم اسکرین میں شامل کریں',
+    pwa_ios_step1:    'سفاری کے نیچے شیئر بٹن دبائیں',
+    pwa_ios_step2:    '"ہوم اسکرین میں شامل کریں" پر ٹیپ کریں',
+    pwa_ios_step3:    'اوپر دائیں کونے میں "شامل کریں" دبائیں',
+    pwa_got_it:       'ٹھیک ہے',
   },
 
   en: {
@@ -143,5 +155,17 @@ export const translations = {
     share_desc:         'Copy this link so pilgrims can install the app on their phones.',
     btn_copyLink:       'Copy Link',
     btn_copied:         '✓ Copied!',
+
+    pwa_subtitle:  'Rafiq-e-Hujjaj Committee',
+    pwa_feature1:  'Works offline — no internet needed',
+    pwa_feature2:  'Installs instantly — no app store needed',
+    pwa_feature3:  'Hajj booklets, videos & prayer guides',
+    pwa_not_now:   'Not Now',
+    pwa_ios_title:    'Install on iPhone',
+    pwa_ios_subtitle: 'Add to your Home Screen',
+    pwa_ios_step1:    'Tap the Share button at the bottom of Safari',
+    pwa_ios_step2:    'Scroll down and tap "Add to Home Screen"',
+    pwa_ios_step3:    'Tap "Add" in the top-right corner',
+    pwa_got_it:       'Got it',
   },
 }
