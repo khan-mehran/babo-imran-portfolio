@@ -3,13 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Babu Imran Qureshi — President, Rafiq-e-Hujjaj Committee</title>
-  <meta name="description" content="Official profile of Babu Imran Qureshi, President of the Rafiq-e-Hujjaj Committee, Pakistan. Leading Hajj training in collaboration with the Ministry of Religious Affairs." />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="manifest" href="manifest.json" />
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-  <link rel="apple-touch-icon" sizes="192x192" href="assets/icon-192.png" />
-  <link rel="apple-touch-icon" sizes="512x512" href="assets/icon-512.png" />
+  <title>Babu Imran Qureshi — Rafiq-e-Hujjaj Committee</title>
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="192x192" href="./assets/icon-192.png" />
   <meta name="theme-color" content="#1A3A2A" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -20,187 +17,12 @@
     (function () {
       var l = localStorage.getItem('rhc-lang') || 'ur';
       document.documentElement.lang = l;
-      document.documentElement.dir  = l === 'ur' ? 'rtl' : 'ltr';
+      document.documentElement.dir = l === 'ur' ? 'rtl' : 'ltr';
     })();
   </script>
 </head>
 <body>
-
-  <div class="bismillah-bar" aria-label="Bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
-
-  <nav class="navbar" role="navigation" aria-label="Main navigation">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
-        <i class="fa-solid fa-moon"></i>
-        <span data-i18n="nav_logoName">بابو عمران قریشی</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active" data-i18n="nav_home">ہوم</a></li>
-        <li><a href="booklet.html" data-i18n="nav_booklet">کتابچہ</a></li>
-        <li><a href="videos.html" data-i18n="nav_videos">ویڈیوز</a></li>
-        <li><a href="download.html" data-i18n="nav_downloadApp">ایپ ڈاؤنلوڈ</a></li>
-      </ul>
-      <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
-        <i class="fa-solid fa-globe"></i>
-        <span data-i18n="lang_toggle">English</span>
-      </button>
-      <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-
-  <main id="page-content">
-
-    <section class="hero" aria-label="Hero">
-      <div class="hero-watermark" aria-hidden="true"></div>
-      <div class="hero-inner">
-        <div class="hero-photo-wrap fade-in">
-          <img src="assets/profile.jpg"
-               alt="Babu Imran Qureshi, President of Rafiq-e-Hujjaj Committee"
-               class="hero-photo"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="hero-photo-placeholder" style="display:none;">
-            <i class="fa-solid fa-user-tie"></i>
-            <span>Photo placeholder</span>
-          </div>
-        </div>
-        <div class="hero-text fade-in">
-          <p class="hero-eyebrow" data-i18n="hero_eyebrow">صدر، رفیق حجاج کمیٹی</p>
-          <h1 data-i18n="nav_logoName">بابو عمران قریشی</h1>
-          <p class="hero-subheading" data-i18n="hero_subheading">پاکستانی حجاج کو مقدس سفر کی رہنمائی</p>
-          <p class="hero-tagline" data-i18n="hero_tagline">
-            کئی دہائیوں سے حجاج کرام کی خدمت میں — ہزاروں افراد کو سنت نبوی ﷺ کے مطابق حج ادا کرنے کی توفیق دے رہے ہیں
-          </p>
-          <div class="hero-ctas">
-            <a href="booklet.html" class="btn btn-gold">
-              <i class="fa-solid fa-book-open"></i><span data-i18n="btn_downloadBooklet">کتابچہ ڈاؤنلوڈ</span>
-            </a>
-            <a href="videos.html" class="btn btn-outline-white">
-              <i class="fa-solid fa-play"></i><span data-i18n="btn_watchVideos">ویڈیوز دیکھیں</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="gold-divider" />
-
-    <section class="about-section section-pad" id="about">
-      <div class="container">
-        <div class="section-header fade-in">
-          <h2 data-i18n="about_title">ہمارے بارے میں</h2>
-          <span class="gold-bar"></span>
-        </div>
-        <div class="about-highlights fade-in">
-          <div class="highlight-card">
-            <span class="icon">🕌</span>
-            <h3 data-i18n="highlight_hajjExpert">حج تربیت کے ماہر</h3>
-          </div>
-          <div class="highlight-card">
-            <span class="icon">📋</span>
-            <h3 data-i18n="highlight_ministryCollab">وزارت کے ساتھ تعاون</h3>
-          </div>
-          <div class="highlight-card">
-            <span class="icon">🎓</span>
-            <h3 data-i18n="highlight_masterTrainer">ماسٹر ٹرینر پروگرام کے سربراہ</h3>
-          </div>
-        </div>
-        <div class="about-bio fade-in">
-          <p data-i18n-html="bio_p1">بابو عمران قریشی رفیق حجاج کمیٹی کے صدر ہیں، جو پاکستانی حجاج کرام کو حج کی تیاری کرانے والی ایک نمایاں تنظیم ہے۔ <strong>وزارت مذہبی امور و بین المذاہب ہم آہنگی</strong> کے ساتھ قریبی تعاون میں، کمیٹی ہر سال وسیع پیمانے پر حج تربیتی پروگرام منعقد کرتی ہے تاکہ حجاج کرام اس مقدس فریضے کو سنت نبوی ﷺ کے مطابق ادا کر سکیں۔</p>
-          <p data-i18n-html="bio_p2">ان کی قیادت میں، ماسٹر ٹرینرز کی ایک سرشار ٹیم حجاج کو حج کے ہر مرحلے میں رہنمائی فراہم کرتی ہے — روانگی سے پہلے کی تیاری سے لے کر ارض مقدس میں مناسک کی ادائیگی تک۔ ان کے اقدام نے ہزاروں پاکستانی حجاج کو اعتماد، علم اور روحانی تیاری کے ساتھ حج کرنے کے قابل بنایا ہے۔</p>
-          <p data-i18n-html="bio_p3">اے پی پی (ایسوسی ایٹڈ پریس آف پاکستان) کی رپورٹ کے مطابق، بابو عمران قریشی نے اعلان کیا کہ رفیق حجاج کمیٹی آئندہ ہفتے سے وزارت مذہبی امور کے تعاون سے کامیاب حجاج کرام کی وسیع تربیت شروع کرے گی — جو تمام متوقع حجاج کو قابل رسائی، اعلیٰ معیار کی دینی تعلیم فراہم کرنے کے ان کے عزم کا مظہر ہے۔</p>
-        </div>
-      </div>
-    </section>
-
-    <hr class="gold-divider" />
-
-    <section class="highlights-section section-pad" id="highlights">
-      <div class="container">
-        <div class="section-header fade-in">
-          <h2 data-i18n="highlights_title">اہم نکات</h2>
-          <span class="gold-bar"></span>
-        </div>
-        <div class="stat-grid">
-          <div class="stat-card fade-in">
-            <span class="stat-number" data-i18n="stat1_number">ہزاروں+</span>
-            <span class="stat-label" data-i18n="stat1_label">ہر سال تربیت یافتہ حجاج</span>
-          </div>
-          <div class="stat-card fade-in">
-            <span class="stat-number" data-i18n="stat2_number">ملک گیر</span>
-            <span class="stat-label" data-i18n="stat2_label">پاکستان بھر میں تربیتی مراکز</span>
-          </div>
-          <div class="stat-card fade-in">
-            <span class="stat-number" data-i18n-html="stat3_number">وزارت<br>تصدیق شدہ</span>
-            <span class="stat-label" data-i18n="stat3_label">وزارت مذہبی امور کے تعاون سے</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="gold-divider" />
-
-    <section class="press-section section-pad" id="press">
-      <div class="container">
-        <div class="section-header fade-in">
-          <h2 data-i18n="press_title">خبروں میں</h2>
-          <span class="gold-bar"></span>
-        </div>
-        <div class="press-card fade-in">
-          <span class="quote-icon" aria-hidden="true">"</span>
-          <p class="press-quote" data-i18n="press_quote">
-            "رفیق حج کمیٹی آئندہ ہفتے سے وزارت مذہبی امور و بین المذاہب ہم آہنگی کے تعاون سے کامیاب حجاج کرام کی وسیع حج تربیت شروع کرے گی۔"
-          </p>
-          <div class="press-source">
-            <span class="app-badge">APP</span>
-            <span class="press-attribution" data-i18n="press_attribution">ایسوسی ایٹڈ پریس آف پاکستان — ۱۳ مارچ</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <div class="footer-divider"></div>
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <i class="fa-solid fa-moon"></i><span data-i18n="nav_logoName">بابو عمران قریشی</span>
-        <span data-i18n="footer_brand">رفیق حجاج کمیٹی | پاکستان</span>
-      </div>
-      <ul class="footer-links">
-        <li><a href="index.html" data-i18n="nav_home">ہوم</a></li>
-        <li><a href="booklet.html" data-i18n="nav_booklet">کتابچہ</a></li>
-        <li><a href="videos.html" data-i18n="nav_videos">ویڈیوز</a></li>
-        <li><a href="download.html" data-i18n="nav_downloadApp">ایپ ڈاؤنلوڈ</a></li>
-      </ul>
-    </div>
-  </footer>
-
-  <nav class="bottom-nav" aria-label="Mobile navigation">
-    <div class="bottom-nav-inner">
-      <a href="index.html" class="bottom-nav-item">
-        <i class="fa-solid fa-house"></i>
-        <span data-i18n="nav_home">ہوم</span>
-      </a>
-      <a href="booklet.html" class="bottom-nav-item">
-        <i class="fa-solid fa-book-open"></i>
-        <span data-i18n="nav_booklet">کتابچہ</span>
-      </a>
-      <a href="videos.html" class="bottom-nav-item">
-        <i class="fa-solid fa-play"></i>
-        <span data-i18n="nav_videos">ویڈیوز</span>
-      </a>
-      <a href="download.html" class="bottom-nav-item">
-        <i class="fa-solid fa-download"></i>
-        <span data-i18n="nav_app">ایپ</span>
-      </a>
-    </div>
-  </nav>
-
-  <script src="js/i18n.js"></script>
-  <script src="js/router.js"></script>
-  <script src="js/main.js"></script>
+  <div id="root"></div>
+  <script type="module" src="./src/main.jsx"></script>
 </body>
 </html>
