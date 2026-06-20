@@ -70,6 +70,8 @@
       share_desc:         'یہ لنک کاپی کریں تاکہ حجاج کرام اپنے فون پر ایپ انسٹال کر سکیں۔',
       btn_copyLink:       'لنک کاپی کریں',
       btn_copied:         '✓ کاپی ہو گیا!',
+      btn_readBooklet:    'کتابچہ پڑھیں',
+      btn_closeBooklet:   'ریڈر بند کریں',
     },
 
     en: {
@@ -138,6 +140,8 @@
       share_desc:         'Copy this link so pilgrims can install the app on their phones.',
       btn_copyLink:       'Copy Link',
       btn_copied:         '✓ Copied!',
+      btn_readBooklet:    'Read Booklet',
+      btn_closeBooklet:   'Close Reader',
     }
   };
 
@@ -193,6 +197,7 @@
     get: function (key) {
       var t = TRANSLATIONS[getLang()];
       return t && t[key] !== undefined ? t[key] : key;
-    }
+    },
+    apply: function () { applyLanguage(getLang()); }
   };
 })();

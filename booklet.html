@@ -7,11 +7,9 @@
   <meta name="description" content="Download the official Hajj Training Booklet by Babu Imran Qureshi and the Rafiq-e-Hujjaj Committee." />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="manifest" href="manifest.json" />
-  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="apple-touch-icon" sizes="192x192" href="assets/icon-192.png" />
   <link rel="apple-touch-icon" sizes="512x512" href="assets/icon-512.png" />
-  <!-- Mobile / PWA -->
   <meta name="theme-color" content="#1A3A2A" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -28,10 +26,8 @@
 </head>
 <body>
 
-  <!-- Bismillah Bar -->
   <div class="bismillah-bar" aria-label="Bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
 
-  <!-- Navigation -->
   <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
@@ -54,55 +50,81 @@
     </div>
   </nav>
 
-  <!-- Page Header -->
-  <header class="page-header">
-    <div class="hero-watermark" aria-hidden="true"></div>
-    <h1 data-i18n="booklet_pageTitle">حج تربیتی کتابچہ</h1>
-    <p data-i18n="booklet_subtitle">رفیق حجاج کمیٹی کی طرف سے سرکاری رہنما</p>
-  </header>
+  <main id="page-content">
 
-  <hr class="gold-divider" />
+    <header class="page-header">
+      <div class="hero-watermark" aria-hidden="true"></div>
+      <h1 data-i18n="booklet_pageTitle">حج تربیتی کتابچہ</h1>
+      <p data-i18n="booklet_subtitle">رفیق حجاج کمیٹی کی طرف سے سرکاری رہنما</p>
+    </header>
 
-  <!-- Booklet Section -->
-  <section class="booklet-section section-pad">
-    <div class="container">
-      <div class="booklet-card fade-in">
+    <hr class="gold-divider" />
 
-        <!-- Book Cover Mockup -->
-        <div class="book-cover">
-          <div class="hero-watermark" aria-hidden="true"></div>
-          <div class="book-cover-inner">
-            <span class="book-crescent">
-              <i class="fa-solid fa-moon"></i>
-              <i class="fa-solid fa-star" style="font-size:1.2rem; margin-left:0.3rem; vertical-align:middle;"></i>
-            </span>
-            <h2>Rafiq-e-Hujjaj</h2>
-            <p class="book-sub">Complete Hajj Training Guide</p>
-            <p class="book-org amiri">رفیق حجاج کمیٹی — پاکستان</p>
+    <section class="booklet-section section-pad">
+      <div class="container">
+        <div class="booklet-card fade-in">
+
+          <!-- Book Cover Mockup -->
+          <div class="book-cover">
+            <div class="hero-watermark" aria-hidden="true"></div>
+            <div class="book-cover-inner">
+              <span class="book-crescent">
+                <i class="fa-solid fa-moon"></i>
+                <i class="fa-solid fa-star" style="font-size:1.2rem; margin-left:0.3rem; vertical-align:middle;"></i>
+              </span>
+              <h2>Rafiq-e-Hujjaj</h2>
+              <p class="book-sub">Complete Hajj Training Guide</p>
+              <p class="book-org amiri">رفیق حجاج کمیٹی — پاکستان</p>
+            </div>
           </div>
+
+          <!-- Booklet Body -->
+          <div class="booklet-body">
+            <p data-i18n="booklet_body">
+              یہ سرکاری کتابچہ، بابو عمران قریشی اور رفیق حجاج کمیٹی کی طرف سے تیار کیا گیا ہے، حج ادا کرنے والے حجاج کرام کے لیے مرحلہ وار رہنمائی فراہم کرتا ہے۔ مکمل مناسک، دعاؤں اور عملی مشوروں پر مشتمل یہ رہنما ہر حاجی کو یقین دلاتا ہے کہ وہ سنت نبوی ﷺ کے مطابق اس مقدس فریضے کو ادا کرنے کے لیے تیار ہے۔
+            </p>
+
+            <!-- Action buttons -->
+            <div class="booklet-actions">
+              <button id="readBookletBtn" class="btn btn-outline-green">
+                <i class="fa-solid fa-book-reader"></i>
+                <span data-i18n="btn_readBooklet">کتابچہ پڑھیں</span>
+              </button>
+
+              <a href="assets/booklet.pdf" download class="btn btn-gold">
+                <i class="fa-solid fa-file-arrow-down"></i>
+                <span data-i18n="btn_downloadPDF">کتابچہ ڈاؤنلوڈ کریں (PDF)</span>
+              </a>
+            </div>
+
+            <p class="booklet-note" data-i18n-html="booklet_note">
+              اصل کتابچہ PDF کو <code>assets/booklet.pdf</code> پر رکھا جائے گا۔ ڈاؤنلوڈ اپ ڈیٹ کرنے کے لیے فائل کو تبدیل کریں۔
+            </p>
+          </div>
+
         </div>
 
-        <!-- Booklet Body -->
-        <div class="booklet-body">
-          <p data-i18n="booklet_body">
-            یہ سرکاری کتابچہ، بابو عمران قریشی اور رفیق حجاج کمیٹی کی طرف سے تیار کیا گیا ہے، حج ادا کرنے والے حجاج کرام کے لیے مرحلہ وار رہنمائی فراہم کرتا ہے۔ مکمل مناسک، دعاؤں اور عملی مشوروں پر مشتمل یہ رہنما ہر حاجی کو یقین دلاتا ہے کہ وہ سنت نبوی ﷺ کے مطابق اس مقدس فریضے کو ادا کرنے کے لیے تیار ہے۔
-          </p>
-
-          <a href="assets/booklet.pdf" download class="btn btn-gold" style="font-size:1.05rem; padding:0.85rem 2rem;">
-            <i class="fa-solid fa-file-arrow-down"></i>
-            <span data-i18n="btn_downloadPDF">کتابچہ ڈاؤنلوڈ کریں (PDF)</span>
-          </a>
-
-          <p class="booklet-note" data-i18n-html="booklet_note">
-            اصل کتابچہ PDF کو <code>assets/booklet.pdf</code> پر رکھا جائے گا۔ ڈاؤنلوڈ اپ ڈیٹ کرنے کے لیے فائل کو تبدیل کریں۔
-          </p>
+        <!-- Inline PDF Viewer (hidden by default) -->
+        <div id="bookletViewer" class="booklet-viewer fade-in" style="display:none;">
+          <div class="booklet-viewer-header">
+            <span data-i18n="booklet_pageTitle">حج تربیتی کتابچہ</span>
+            <a href="assets/booklet.pdf" target="_blank" class="booklet-viewer-open" aria-label="Open in new tab">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+          <iframe
+            src="assets/booklet.pdf"
+            class="booklet-iframe"
+            title="Hajj Training Booklet"
+            loading="lazy">
+          </iframe>
         </div>
 
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
+  </main>
+
   <footer class="footer">
     <div class="footer-divider"></div>
     <div class="footer-inner">
@@ -119,7 +141,6 @@
     </div>
   </footer>
 
-  <!-- Bottom Navigation (mobile) -->
   <nav class="bottom-nav" aria-label="Mobile navigation">
     <div class="bottom-nav-inner">
       <a href="index.html" class="bottom-nav-item">
@@ -142,6 +163,7 @@
   </nav>
 
   <script src="js/i18n.js"></script>
+  <script src="js/router.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

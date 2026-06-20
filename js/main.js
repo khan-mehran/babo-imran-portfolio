@@ -273,6 +273,36 @@
   });
 })();
 
+// ---------- Booklet Reader Toggle ----------
+(function () {
+  var btn    = document.getElementById('readBookletBtn');
+  var viewer = document.getElementById('bookletViewer');
+  if (!btn || !viewer) return;
+
+  btn.addEventListener('click', function () {
+    var isOpen = viewer.style.display !== 'none';
+    if (isOpen) {
+      viewer.style.display = 'none';
+      setBookletBtn(btn, false);
+    } else {
+      viewer.style.display = 'block';
+      setBookletBtn(btn, true);
+      viewer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+
+  function setBookletBtn(b, open) {
+    var icon = b.querySelector('i');
+    var span = b.querySelector('span');
+    if (icon) icon.className = open ? 'fa-solid fa-xmark' : 'fa-solid fa-book-reader';
+    if (span) {
+      var key = open ? 'btn_closeBooklet' : 'btn_readBooklet';
+      span.setAttribute('data-i18n', key);
+      span.textContent = (window.RHCi18n ? window.RHCi18n.get(key) : span.textContent);
+    }
+  }
+})();
+
 // ---------- Register Service Worker ----------
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () {
