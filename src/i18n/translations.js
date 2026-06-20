@@ -44,6 +44,8 @@ export const translations = {
     btn_downloadPDF:   'کتابچہ ڈاؤنلوڈ کریں (PDF)',
     btn_readBooklet:   'کتابچہ پڑھیں',
     btn_closeBooklet:  'ریڈر بند کریں',
+    btn_openPDF:       'PDF براؤزر میں کھولیں',
+    booklet_ios_msg:   'آئی فون پر PDF ان لائن نہیں کھل سکتی۔ نیچے دیے گئے بٹن سے براہ راست کھولیں۔',
     booklet_note:      'فائل کو assets/booklet.pdf پر رکھیں۔ تبدیل کرنے سے ڈاؤنلوڈ اپ ڈیٹ ہو جائے گا۔',
 
     videos_pageTitle: 'ویڈیو گیلری',
@@ -129,6 +131,8 @@ export const translations = {
     btn_downloadPDF:   'Download Booklet (PDF)',
     btn_readBooklet:   'Read Booklet',
     btn_closeBooklet:  'Close Reader',
+    btn_openPDF:       'Open PDF in Browser',
+    booklet_ios_msg:   'iOS Safari cannot display PDFs inline. Tap below to open it directly.',
     booklet_note:      'Place the PDF at assets/booklet.pdf. Replace the file to update the download.',
 
     videos_pageTitle: 'Video Gallery',

@@ -669,6 +669,34 @@ h1, h2, h3 {
   .booklet-actions { flex-direction: column; align-items: center; }
 }
 
+/* iOS PDF fallback */
+.booklet-ios-open {
+  max-width: 860px;
+  margin: 2rem auto 0;
+  background: var(--white);
+  border: 2px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 8px 40px rgba(26,58,42,0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.booklet-ios-icon {
+  font-size: 3rem;
+  color: var(--gold);
+  opacity: 0.7;
+}
+.booklet-ios-open p {
+  font-size: 0.95rem;
+  color: var(--walnut);
+  max-width: 380px;
+  line-height: 1.7;
+  margin: 0;
+}
+
 /* ---------- Videos Page ---------- */
 .video-grid {
   display: grid;

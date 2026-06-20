@@ -38,28 +38,19 @@ export default function PWAInstallSheet() {
     if (isStandalone) return
     if (sessionStorage.getItem('rhc-pwa-dismissed')) return
 
-    // iOS Safari: show after 2.5s
-    if (isIos && isSafari) {
-      const id = setTimeout(triggerShow, 2500)
-      return () => clearTimeout(id)
-    }
+    // Always show after a short delay — don't gate on beforeinstallprompt
+    const id = setTimeout(triggerShow, 2000)
 
-    // Android / desktop Chrome: wait for beforeinstallprompt
-    if (!isIos) {
-      let timerId
-      const handler = e => {
-        e.preventDefault()
-        setDeferredPrompt(e)
-        timerId = setTimeout(triggerShow, 2000)
-      }
-      const onInstalled = () => dismiss()
-      window.addEventListener('beforeinstallprompt', handler)
-      window.addEventListener('appinstalled', onInstalled)
-      return () => {
-        window.removeEventListener('beforeinstallprompt', handler)
-        window.removeEventListener('appinstalled', onInstalled)
-        clearTimeout(timerId)
-      }
+    // Separately capture the install prompt to enable the install button
+    const onPrompt = e => { e.preventDefault(); setDeferredPrompt(e) }
+    const onInstalled = () => dismiss()
+    window.addEventListener('beforeinstallprompt', onPrompt)
+    window.addEventListener('appinstalled', onInstalled)
+
+    return () => {
+      clearTimeout(id)
+      window.removeEventListener('beforeinstallprompt', onPrompt)
+      window.removeEventListener('appinstalled', onInstalled)
     }
   }, [])
 

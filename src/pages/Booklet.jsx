@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { useLang } from '../context/LangContext'
 
+const isIos = /iphone|ipad|ipod/i.test(navigator.userAgent)
+
 export default function Booklet() {
   const { t } = useLang()
   const [readerOpen, setReaderOpen] = useState(false)
@@ -50,19 +52,35 @@ export default function Booklet() {
           </div>
 
           {readerOpen && (
-            <div className="booklet-viewer">
-              <div className="booklet-viewer-header">
-                <span><i className="fa-solid fa-book-open" style={{ marginInlineEnd: '0.5rem' }}></i>{t('booklet_pageTitle')}</span>
-                <a href="/assets/booklet.pdf" target="_blank" rel="noopener" className="booklet-viewer-open">
+            isIos ? (
+              <div className="booklet-ios-open">
+                <i className="fa-solid fa-file-pdf booklet-ios-icon"></i>
+                <p>{t('booklet_ios_msg')}</p>
+                <a
+                  href="/assets/booklet.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  className="btn btn-gold"
+                >
                   <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                  {t('btn_openPDF')}
                 </a>
               </div>
-              <iframe
-                src="/assets/booklet.pdf"
-                className="booklet-iframe"
-                title={t('booklet_pageTitle')}
-              ></iframe>
-            </div>
+            ) : (
+              <div className="booklet-viewer">
+                <div className="booklet-viewer-header">
+                  <span><i className="fa-solid fa-book-open" style={{ marginInlineEnd: '0.5rem' }}></i>{t('booklet_pageTitle')}</span>
+                  <a href="/assets/booklet.pdf" target="_blank" rel="noopener" className="booklet-viewer-open">
+                    <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
+                <iframe
+                  src="/assets/booklet.pdf"
+                  className="booklet-iframe"
+                  title={t('booklet_pageTitle')}
+                ></iframe>
+              </div>
+            )
           )}
         </div>
       </section>
